@@ -6,11 +6,13 @@ RSpec.describe User, type: :model do
   end
 
   it "has many carts" do
+    #binding.pry
     @user.carts.create
     expect(@user.carts.count).to eq(1)
   end
 
   it "has a current_cart" do
+    #binding.pry
     @user.current_cart = @user.carts.create
     expect(@user.current_cart).to be_a(Cart)
   end

@@ -91,6 +91,7 @@ describe 'Feature Test: Cart', :type => :feature do
           click_button("Add to Cart")
         end
         @user.reload
+        #binding.pry
         expect(@user.current_cart).to_not be_nil
       end
 

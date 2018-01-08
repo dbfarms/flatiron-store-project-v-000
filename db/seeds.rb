@@ -13,3 +13,8 @@ Item.all.each do |item|
   item.save
   counter += 1
 end
+
+new_cart = Cart.new
+
+User.create(:email => "email@email.com", :password => "123456789")
+
